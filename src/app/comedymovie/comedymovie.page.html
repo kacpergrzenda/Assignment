@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title color="danger">Comedy Movies</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card *ngFor = "let comedies of ComedyMovieData">
+  <img src="{{comedies.Poster}}" />
+  <ion-card-header>
+    <ion-card-subtitle>{{comedies.Type}}</ion-card-subtitle>
+    <ion-card-title>{{comedies.Title}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+     Movie Made in {{comedies.Year}}
+  </ion-card-content>
+</ion-card>
+<ion-footer >
+  <ion-toolbar color="dark">
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-footer>
+</ion-content>

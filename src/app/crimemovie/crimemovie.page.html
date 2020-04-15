@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title color="danger">Crime Movies</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor = "let crime of CrimeMovieData">
+    <img src="{{crime.Poster}}" />
+    <ion-card-header>
+      <ion-card-subtitle>{{crime.Type}}</ion-card-subtitle>
+      <ion-card-title>{{crime.Title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+       Movie Made in {{crime.Year}}
+    </ion-card-content>
+  </ion-card>
+  <ion-footer >
+    <ion-toolbar color="dark">
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-footer>
+  </ion-content>

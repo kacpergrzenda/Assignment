@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title color="danger">Choose By Year</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item color="danger">
+    <ion-text color="dark">
+      <h2>Love Movies from 2020</h2>
+    </ion-text>
+  </ion-item>
+  
+  
+  <ion-card *ngFor = "let year of YearMovieData">
+    <img src="{{year.Poster}}" />
+    <ion-card-header>
+      <ion-card-subtitle>{{year.Type}}</ion-card-subtitle>
+      <ion-card-title>{{year.Title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+       Movie Made in {{year.Year}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<style>
+  h2 {
+    font-weight: 800;
+  }
+</style>
